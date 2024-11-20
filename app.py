@@ -21,5 +21,9 @@ def get_metrics():
         'metrics': metrics
     })
 
+@app.route('/meu_endpoint', methods=['GET'])
+def meu_endpoint():
+    return jsonify({"status": "success", "data": "Hello, Streamlit!"})
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
